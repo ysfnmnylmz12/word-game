@@ -49,7 +49,7 @@ export default function Home() {
     setPrediction(false);
     let answer = "";
     buy.map((l) => (answer = answer + l));
-    if (answer === word) {
+    if (answer.toLocaleLowerCase("tr-TR") === word.toLocaleLowerCase("tr-TR")) {
       setTotalPoint((prevState) => prevState + point);
     } else {
       setTotalPoint((prevState) => prevState - point);
