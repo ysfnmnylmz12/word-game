@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+body{
+  font-family: 'DM Sans', sans-serif;
+}
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  margin: 2rem;
+  > button {
+    height: 50px;
+    box-sizing: border-box;
+    border: none;
+    outline: 0;
+    background: linear-gradient(grey, grey) top / calc(100% - 30px) 1px,
+      linear-gradient(grey, grey) bottom/calc(100% - 30px) 1px, linear-gradient(grey, grey) left / 1px calc(100% - 30px),
+      linear-gradient(grey, grey) right / 1px calc(100% - 30px),
+      linear-gradient(to bottom right, transparent calc(50% - 1px), grey, transparent calc(50% + 1px)) top left/15px
+        15px,
+      linear-gradient(to bottom right, transparent calc(50% - 1px), grey, transparent calc(50% + 1px)) bottom right/15px
+        15px,
+      linear-gradient(to bottom left, transparent calc(50% - 1px), grey, transparent calc(50% + 1px)) top right/15px
+        15px,
+      linear-gradient(to bottom left, transparent calc(50% - 1px), grey, transparent calc(50% + 1px)) bottom left/15px
+        15px;
+
+    background-repeat: no-repeat;
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
