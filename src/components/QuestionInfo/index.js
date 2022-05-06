@@ -3,10 +3,14 @@ import styles from "./QuestionInfo.module.scss";
 const QuestionInfo = ({ data, point, totalPoint }) => {
   return (
     <div className={styles.main}>
-      <h1>{data.question}</h1>
+      <h1 className={styles.question}>{data.question}</h1>
       <div className={styles.points}>
-        <h2>Soru Puanı : {String(point)}</h2>
-        <h2>Toplam Puan : {String(totalPoint)}</h2>
+        <div className={styles.total}>
+          <h2>Toplam Puan : {String(totalPoint)}</h2>
+        </div>
+        <div className={styles.current}>
+          <h2>Soru Puanı : {String(point)}</h2>
+        </div>
       </div>
     </div>
   );

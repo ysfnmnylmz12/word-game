@@ -1,8 +1,53 @@
-.main{
-    max-width: 1440px;
-    .points{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
+.main {
+  max-width: 1440px;
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+    max-width: 320px;
+  }
+  .points {
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 20px;
+    .total,
+    .current {
+      padding: 0px 20px;
+      height: fit-content;
+      width: 200px;
+      border: 2px solid black;
+      margin: 0;
+      font-size: 12px;
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+        padding: 0 0 0 20px;
+      }
     }
+    .total {
+      transform: skewX(20deg);
+      h2 {
+        margin: 2px 0;
+        transform: skewX(-20deg);
+      }
+    }
+    .current {
+      transform: skewX(-20deg);
+      h2 {
+        margin: 2px 0;
+        transform: skewX(20deg);
+      }
+    }
+  }
+  .question {
+    background-color: #ef200e;
+    padding: 2rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 10px wheat;
+    border-style: double;
+    color: white;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+      font-size: 24px;
+    }
+  }
 }
